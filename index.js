@@ -55,18 +55,11 @@ let cat = {
    so code reviewers might focus on a single file that is index.js.
    */
 
-function makeString(obj) {
-  let arrStr = [];
-  for (let value in obj) {
-    arrStr.push(obj[value]);
-  }
-  return arrStr.join(";");
-}
 
-print(makeString(man));
-print(makeString(woman));
-print(makeString(cat));
-print(makeString(dog));
+const arrObjects = [man, woman, cat, dog];
+let list = arrObjects.map((el)=> [el.entity, el.name, el.sex, el.hands, el.legs, el.say, el.friends].join('; '));
+list.forEach(el=> print(el));
+
 /* Print examples:
    print('ABC');
    print('<strong>ABC</strong>');
