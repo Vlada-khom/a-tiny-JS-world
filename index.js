@@ -56,9 +56,12 @@ let cat = {
    */
 
 
-const arrObjects = [man, woman, cat, dog];
-let list = arrObjects.map((el)=> [el.entity, el.name, el.sex, el.hands, el.legs, el.say, el.friends].join('; '));
-list.forEach(el=> print(el));
+const inhabitants = [man, woman, cat, dog];
+const properties = ['entity', 'name', 'sex', 'hands', 'legs', 'say', 'friends'];
+let characteristicsOfInhabitants = inhabitants.forEach((inhabitant)=> {
+  print(properties.map(property => [inhabitant[property]]).join('; '))
+  });
+
 
 /* Print examples:
    print('ABC');
