@@ -58,8 +58,8 @@ let cat = {
 
 const inhabitants = [man, woman, cat, dog];
 const properties = ['entity', 'name', 'sex', 'hands', 'legs', 'say', 'friends'];
-let characteristicsOfInhabitants = inhabitants.forEach((inhabitant)=> {
-  print(properties.map(property => [inhabitant[property]]).join('; '))
+inhabitants.forEach((inhabitant)=> {
+  print(properties.map(property => inhabitant[property]).join('; '))
   });
 
 
